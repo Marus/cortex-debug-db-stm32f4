@@ -1,0 +1,40 @@
+{
+	"publisher": "marus25",
+	"name": "cortex-debug-dp-stm32f4",
+	"displayName": "Cortex-Debug: Device Support Pack - STM32F4",
+	"description": "This package contains additional support functionality (SVD definitions) for Cortex-Debug for STM32F4 devices",
+	"version": "1.0.0",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Debuggers"
+	],
+	"keywords": [
+		"Cortex-Debug",
+		"Cortex-Debug Device Support Pack",
+        "cortex-m",
+        "gdb",
+        "debug",
+        "embedded"
+    ],
+	"activationEvents": [
+		"onDebugResolve:cortex-debug"
+	],
+	"main": "./out/extension.js",
+	"contributes": {},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	}
+}
